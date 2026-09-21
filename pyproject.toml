@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-mock-studio"
+version = "1.0.0"
+description = "A local, dependency-free HTTP mock API server driven by JSON route definitions."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+keywords = ["api", "mock", "http", "testing", "development"]
+
+[project.scripts]
+api-mock-studio = "api_mock_studio.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
