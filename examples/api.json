@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {"method": "GET", "path": "/health", "body": {"status": "ok"}},
+    {"method": "GET", "path": "/users/:id", "body": {"id": "{{params.id}}", "name": "Example User"}},
+    {"method": "POST", "path": "/echo", "status": 201, "body": {"$echo": true}},
+    {"method": "GET", "path": "/slow", "delay_ms": 250, "body": {"status": "delayed"}}
+  ]
+}
